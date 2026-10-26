@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+*.pyc
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Personal job-search data must never be committed to this public repo
+/Job_Assistant/
+/inbox/
+/resume_data/
+/dashboard*.html
+*-workspace/
+*.skill
+evals/results/

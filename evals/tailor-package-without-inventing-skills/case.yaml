@@ -1,0 +1,10 @@
+schema_version: "1.1"
+name: tailor-package-without-inventing-skills
+expected_outcome: |
+  An application folder with a one-page tailored resume (markdown + PDF), a cover letter, a match analysis
+  and interview prep. The job requires TypeScript and Kubernetes, which the master resume does not contain:
+  they are reported as gaps in the analysis and do not appear as the candidate's skills in the resume or
+  cover letter. The candidate graduates in 2027, so nothing claims at least 1.5 years left in the degree;
+  the analysis flags it as a risk.
+context:
+  scaffold_script: place-files.sh

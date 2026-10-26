@@ -1,0 +1,8 @@
+Noa Levi
+050-0000000 | noa.levi.dev@example.com | github.com/noalevi-example
+Education: B.Sc. Computer Science, Tel Aviv University, 2023 - expected 2027. GPA 88.
+Skills: Python, Java, JavaScript, React, SQL, Git
+Projects:
+TaskFlow - a task management web app (React, Node.js, PostgreSQL). Team of 3. I built the REST API and auth.
+Experience: Teaching assistant, Intro to CS, Tel Aviv University, 2025 - present. Run weekly practice sessions for 40 students.
+Military service: Intelligence analyst, 2018 - 2020

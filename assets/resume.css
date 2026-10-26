@@ -1,0 +1,58 @@
+/* Clean, single-column, ATS-friendly styling for resumes and cover letters (used by build_pdf.py) */
+@page { size: A4; margin: 12mm 14mm 11mm 14mm; }
+
+body {
+  font-family: Calibri, Carlito, "Segoe UI", Arial, "Liberation Sans", "DejaVu Sans", sans-serif;
+  font-size: 10.4pt; line-height: 1.27; color: #1b1b1b; margin: 0;
+}
+a { color: inherit; text-decoration: none; }
+
+/* Header: name, headline, contact line */
+h1 { font-size: 23pt; font-weight: 700; margin: 0 0 1px; letter-spacing: 0.2px; color: #111; }
+h1 + p { margin: 0 0 2px; font-size: 11.2pt; color: #1F3A5F; }
+h1 + p strong { font-weight: 700; }
+h1 + p + p { margin: 0 0 4px; font-size: 9.6pt; color: #444; }
+
+/* Section headings */
+h2 {
+  font-size: 11pt; font-weight: 700; text-transform: uppercase; letter-spacing: 0.9px;
+  color: #1F3A5F; border-bottom: 1.1px solid #1F3A5F; padding-bottom: 1.5px; margin: 7px 0 3px;
+}
+/* Entry headings (project / job / degree) with a right-aligned date or link */
+h3 { font-size: 10.6pt; font-weight: 700; margin: 4px 0 0; color: #111; }
+h3 .right { float: right; font-weight: 400; font-size: 9.6pt; color: #444; }
+h3 .right a { color: #1F3A5F; font-weight: 700; }
+h3 + p em { font-style: normal; font-size: 9.4pt; color: #555; }   /* tech-stack line under a project */
+h3 + p { margin: 0 0 1px; }
+
+p { margin: 2px 0; }
+ul { margin: 1px 0 3px; padding-left: 15px; }
+li { margin: 0.5px 0; }
+strong { font-weight: 700; }
+hr { border: 0; border-top: 1px solid #ccc; margin: 6px 0; }
+table { border-collapse: collapse; }
+
+/* ---------- Cover letter ---------- */
+body.letter { font-size: 11pt; line-height: 1.45; }
+body.letter h1 { font-size: 20pt; }
+body.letter h1 + p + p { margin-bottom: 14px; padding-bottom: 8px; border-bottom: 1.1px solid #1F3A5F; }
+body.letter p { margin: 0 0 9px; }
+
+/* ---------- Plain document (analysis, interview prep) ---------- */
+body.doc { font-size: 10.5pt; line-height: 1.4; }
+body.doc h1 { font-size: 18pt; }
+body.doc h1 + p, body.doc h1 + p + p { font-size: 10.5pt; color: #1b1b1b; }
+body.doc table { width: 100%; margin: 4px 0 8px; font-size: 9.6pt; }
+body.doc th, body.doc td { border: 1px solid #ccc; padding: 3px 5px; text-align: left; vertical-align: top; }
+body.doc th { background: #EEF2F7; }
+body.doc code { font-family: "DejaVu Sans Mono", Consolas, monospace; font-size: 9pt; }
+
+/* ---------- Hebrew (RTL) documents - set automatically by build_pdf.py ---------- */
+html[dir="rtl"] body { font-family: Arial, "Segoe UI", "DejaVu Sans", sans-serif; }
+html[dir="rtl"] ul { padding-left: 0; padding-right: 16px; }
+html[dir="rtl"] th, html[dir="rtl"] td { text-align: right; }
+html[dir="rtl"] h3 .right { float: left; }
+
+/* status symbols: build_pdf.py swaps colour emoji (check / yellow circle / cross / warning) for these */
+.sym { font-family: "DejaVu Sans", "Segoe UI Symbol", sans-serif; font-weight: 700; }
+.sym.ok { color: #1E7B34; }  .sym.mid { color: #B7791F; }  .sym.no { color: #B42318; }  .sym.warn { color: #B7791F; }

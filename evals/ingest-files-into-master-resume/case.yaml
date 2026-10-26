@@ -1,0 +1,10 @@
+schema_version: "1.1"
+name: ingest-files-into-master-resume
+expected_outcome: |
+  The inbox files are extracted (ingest.py) and Job_Assistant/resume_data/master_resume.md is filled with the
+  candidate's real facts: Tel Aviv University B.Sc. (GPA 88), the TaskFlow project merged from the CV and the
+  README (Node.js/Express REST API with 18 endpoints, PostgreSQL, Jest 85% coverage, Docker, GitHub Actions),
+  the teaching-assistant job, military service, and the AWS item as a completed course rather than an AWS
+  certification. No template placeholders remain, and open questions are listed for the candidate.
+context:
+  scaffold_script: place-files.sh
